@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/css/style.css">
+<title>ECサイト 新規会員登録ページ</title>
+</head>
+<body>
+  <header>
+    <h1>ECサイト</h1>
+  </header>
+  <section id="signup" class="signup">
+    <div class="signup__wrapper">
+      <h2 class="signup__sectionTitle">ユーザー　新規登録</h2>
+      <form th:action="@{/ecsite/signup/register}" method="post" class="signup__form">
+        <section class="signup__item">
+          <label for="signup__fullNameInput" class="signup__fullNameLabel">氏名</label>
+          <span>:</span><input type="text" name="fullName" id="signup__fullNameInput" th:value="${fullName}"            class="signup__fullNameInput">
+        </section>
+        <section class="signup__item">
+          <label for="signup__userNameInput" class="signup__userNameLabel">ユーザー名</label>
+          <span>:</span><input type="text" name="userName" id="signup__userNameInput" th:value="${userName}"            class="signup__userNameInput">
+        </section>
+        <section class="signup__item">
+          <label for="signup__passwordInput" class="signup__passwordLabel">パスワード</label>
+          <span>:</span><input type="password" name="password" id="signup__passwordInput" th:value="${password}"
+            class="signup__passwordInput">
+        </section>
+        <button type="submit" class="signup__submitButton">登録</button>
+      </form>
+      <p class="error" th:text="${errorMessage}" />
+    </div>
+  </section>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper
+	namespace="jp.co.internous.ecsite.model.mapper.TblPurchaseMapper">
+
+	<insert id="insert" useGeneratedKeys="true">
+		insert into tbl_purchase
+		(user_id, goods_id, goods_name, item_count, total, created_at)
+		values
+		(#{userId}, #{goodsId}, #{goodsName}, #{itemCount}, #{total}, now());
+	</insert>
+
+	<select id="findHistory" resultType="jp.co.internous.ecsite.model.dto.HistoryDto">
+		select * from tbl_purchase p
+		where p.user_id = #{userId}
+		order by p.created_at desc;
+	</select>
+
+</mapper>
