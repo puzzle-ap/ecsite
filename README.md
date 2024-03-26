@@ -1,2 +1,2 @@
 # ecsite
-プログラミングスクールの授業で作った、Spring Bootを使用したECサイト
+Spring Bootを使用して作成したECサイト
