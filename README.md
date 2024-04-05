@@ -1,5 +1,5 @@
 # ecsite
-プログラミングスクールの授業で作った、Spring Bootを使用したECサイト。<br>
+Spring Bootを使用して作成したECサイト。<br>
 ![ecsite_admin_page](https://github.com/puzzle-ap/ecsite/assets/149124533/93c129eb-6f67-4447-b74f-5828d9aff70d)<br>
 ![ecsite_top_page](https://github.com/puzzle-ap/ecsite/assets/149124533/69119507-84ff-46ad-a545-d513b1885354)<br>
 # 使用技術
